@@ -83,3 +83,18 @@ Vagrant is [very well documented](http://vagrantup.com/v1/docs/index.html) but h
 * Beanstalkd - 1.4.6
 * Redis - 2.2.12
 * Memcached - 1.4.13
+
+##### VIRTUAL BOX GUEST ADDITIONS TIP #####
+
+[Sync VirtualBox Guest Additions](http://kvz.io/blog/2013/01/16/vagrant-tip-keep-virtualbox-guest-additions-in-sync/)
+$ vagrant plugin install vagrant-vbguest
+
+##### LARAVEL LOCAL ENVIRONMENT TIP #####
+
+Setup your `local` environment in `bootstrap/start.php` to accommodate your environment by running `php check.php` from the root directory:
+
+`$env = $app->detectEnvironment(array(
+
+	'local' => array('*.local'),
+
+));`
